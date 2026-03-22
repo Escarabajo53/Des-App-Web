@@ -1,39 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Proyecto 3</title>
+    <meta charset="UTF-8">
+    <title>Modelado 3D</title>
+
+    <style>
+    @font-face {
+        font-family: "Texto"; 
+        src: url("fonts/komika_display/KMKDSP__.ttf") format("truetype");
+    }
+    @font-face {
+        font-family: "Titulos";
+        src: url("fonts/avengeance_mightiest_avenger/AVENGEANCE MIGHTIEST AVENGER.ttf") format("truetype");
+    }
+
+    body {
+        font-family: "Texto", Arial, sans-serif;
+        margin: 0; 
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Titulos", Arial, sans-serif;
+    }
+    h2 {
+        font-size: 18px;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        gap: 0;
+        height: 100vh; 
+    }
+
+    .col-1 { background: #1F222D; }
+    .col-2 { background: #0D0D0D; }
+    .col-3 { background: #1F222D; }
+
+    .col-1, .col-2, .col-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    img:last-of-type {
+        margin-top: 18px;
+    }
+
+    section {
+        margin-top: 30px;
+    }
+
+    .columnas {
+        display: flex;
+        gap: 20px;
+    }
+
+    .col-2 {
+    padding: 25px; 
+    }
+    
+    .col-2{
+        padding: 20px 20px;
+    }
+
+    .columna {
+        width: 50%;
+    }
+
+    h1, p {
+        margin-bottom: 18px;
+        display: block;
+    }
+
+    a, p {
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    a {
+        font-size: 18px;
+        color: white;
+        background-color: #0D0D0D;
+        
+        padding: 18px 18px;
+        border-radius: 10px;
+
+        text-decoration: none;
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 6px 30px;
+
+        border: 2px solid #FF0020;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .grupo-arriba {
+        display: flex;
+        gap: 15px;
+    }
+
+    </style>
 </head>
 
 <body>
 
-<header>
-<h1>Pagina 3</h1>
-</header>
+    <div class="contenedor">
+        <div class="col-1">
+        </div>
 
-<main>
+        <div class="col-2">
+            <div class="menu">
+                <div class="grupo-arriba">
+                    <a href="portafolio.html"> < </a>
+                    <h1>PORTAFOLIO</h1>
+                </div>
+            </div>
+        </div>
 
-<section>
-<h2>Modelado 3D</h2>
-
-<img src="img/img (3).jpeg" width="300">
-
-<p>
-Aquí describes el proyecto.  
-Por ejemplo: modelado realizado en Blender con iluminación y texturas.
-</p>
-
-</section>
-
-</main>
-
-<nav>
-<a href="index.html">⬅ Volver al CV</a>
-</nav>
-
-<footer>
-<p>Portafolio personal</p>
-</footer>
+        <div class="col-3">           
+        </div>
+        
+    </div>     
 
 </body>
 </html>
