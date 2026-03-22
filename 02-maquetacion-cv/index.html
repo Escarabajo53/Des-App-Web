@@ -2,56 +2,115 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Curriculum Vitae</title>
+    <title>CV - Joshua Horta Diaz</title>
+
+    <style>
+    @font-face {
+        font-family: "Texto"; 
+        src: url("fonts/komika_display/KMKDSP__.ttf") format("truetype");
+    }
+    @font-face {
+        font-family: "Titulos";
+        src: url("fonts/avengeance_mightiest_avenger/AVENGEANCE MIGHTIEST AVENGER.ttf") format("truetype");
+    }
+
+    body {
+        font-family: "Texto", Arial, sans-serif;
+        margin: 0; 
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Titulos", Arial, sans-serif;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 15% 20% 50% 15%;
+        gap: 0;
+        height: 100vh; 
+    }
+
+    /* 5) colores de las columnas para verlas */
+    .col-1 { background: #1F222D; }
+    .col-2 { background: #0D0D0D; }
+    .col-3 { background: #747474; }
+    .col-4 { background: #1F222D; }
+
+    /* 6) centrar contenido de cada columna */
+    .col-1, .col-2, .col-3, .col-4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+    }
+    section {
+        margin-top: 30px;
+    }
+    .columnas {
+        display: flex;
+        gap: 20px;
+    }
+    .col-3 {
+    padding: 25px; 
+    }
+    .columna {
+        width: 50%;
+    }
+    
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Joshua Horta Diaz</h1>
-    <p>Estudiante de Desarrollo de Aplicaciones Web</p>
-    <p>Ubicación: Ciudad del Carmen, Campeche, México</p>
-    <p>Correo: joshuahd15@gmail.com</p>
-</header>
+    <div class="contenedor">
+        <div class="col-1">
+        </div>
+        <div class="col-2">
+            <!-- Contenido columna 2 -->
+             <main>
+                <img src="img/FotoJHD.jpg" width="200" alt="Foto Joshua">
+                <img src="img/TenguLogo.png" width="200" alt="Foto Logo">
+             </main>
+            
 
-<nav>
-    <h2>Portafolio</h2>
-    <ul>
-        <li><a href="pag1.html">Pagina 1</a></li>
-        <li><a href="pag2.html">Pagina 2</a></li>
-        <li><a href="pag3.html">Pagina 3</a></li>
-        <li><a href="pag4.html">Pagina 4</a></li>
-        <li><a href="pag5.html">Pagina 5</a></li>
-    </ul>
-</nav>
+        </div>
+        <div class="col-3">           
+            <main>
+                <header>
+                    <h1>Joshua Horta Diaz</h1>
+                </header>
+                <section>
+                    <p>Soy un joven universitario en búsqueda de nuevas habilidades para su formación profesional.</p>
+                </section>
 
-<main>
+                <section>
+                    <div>
+                        <h2>Experiencia</h2>
+                        <p>VOLKSVAGEN<br>
+                        Prácticas Profesionales (Septiembre 2022 – Marzo 2023)<br>
+                        Brindé apoyo en la gestión del almacén de la agencia, participando
+                        en la localización de refacciones automotrices y en el control de inventario.</p>
+                    </div>
 
-<section>
-    <h2>Sobre mí</h2>
-    <p>Aquí puedes escribir una pequeña descripción sobre ti, tus intereses y tus metas profesionales.</p>
-</section>
+                    <div>
+                        <h2>Formacion</h2>
+                        <p>Universidad (2023 - Actualidad)</p>
+                    </div>
+                </section>
 
-<section>
-    <h2>Habilidades</h2>
-    <ul>
-        <li>HTML básico</li>
-        <li>Uso de Git y GitHub</li>
-        <li>Modelado 3D en Blender</li>
-        <li>Ilustración digital</li>
-    </ul>
-</section>
-
-</main>
-
-<aside>
-    <h3>Intereses</h3>
-    <p>Diseño, programación, videojuegos, arte digital.</p>
-</aside>
-
-<footer>
-    <p>© 2026 Tu Nombre</p>
-</footer>
+                <section>
+                    <h2>Herramientas</h2>
+                    <p>Ibis Paint<br>Gimp<br>Photoshop</p>
+                </section>
+            </main>
+        </div>
+        <div class="col-4">
+        </div>
+    </div>    
 
 </body>
 </html>
