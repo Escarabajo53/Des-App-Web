@@ -1,29 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Portafolio</title>
+    <meta charset="UTF-8">
+    <title>Portafolio</title>
+
+    <style>
+    @font-face {
+        font-family: "Texto"; 
+        src: url("fonts/komika_display/KMKDSP__.ttf") format("truetype");
+    }
+    @font-face {
+        font-family: "Titulos";
+        src: url("fonts/avengeance_mightiest_avenger/AVENGEANCE MIGHTIEST AVENGER.ttf") format("truetype");
+    }
+
+    body {
+        font-family: "Texto", Arial, sans-serif;
+        margin: 0; 
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Titulos", Arial, sans-serif;
+    }
+    h2 {
+        font-size: 18px;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        gap: 0;
+        height: 100vh; 
+    }
+
+    .col-1 { background: #1F222D; }
+    .col-2 { background: #0D0D0D; }
+    .col-3 { background: #1F222D; }
+
+    .col-1, .col-2, .col-3 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    img:last-of-type {
+        margin-top: 18px;
+    }
+
+    section {
+        margin-top: 30px;
+    }
+
+    .columnas {
+        display: flex;
+        gap: 20px;
+    }
+
+    .col-2 {
+    padding: 25px; 
+    }
+    
+    .col-2{
+        padding: 20px 20px;
+    }
+
+    .columna {
+        width: 50%;
+    }
+
+    h1, p {
+        margin-bottom: 18px;
+        display: block;
+    }
+
+    a, p {
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    a {
+        font-size: 18px;
+        color: white;
+        background-color: #0D0D0D;
+        
+        padding: 18px 18px;
+        border-radius: 10px;
+
+        text-decoration: none;
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 6px 30px;
+
+        border: 2px solid #FF0020;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .grupo-arriba {
+        display: flex;
+        gap: 15px;
+    }
+
+    </style>
 </head>
 
 <body>
 
-<header>
-<h1>Portafolio</h1>
-</header>
+    <div class="contenedor">
+        <div class="col-1">
+        </div>
 
-<img src="img/TenguLogo.png" width="300">
+        <div class="col-2">
+            <div class="menu">
+                <img src="img/TenguLogo.png" width="220px">
+                <h1>PORTAFOLIO</h1>
+                <div class="grupo-arriba">
+                    <a href="ilus.html">I l u s t r a c i o n</a>
+                    <a href="mod3d.html">M o d e l a d o 3 D</a>
+                    <a href="foto.html">F o t o g r a f i a</a>
+                </div>
+                <a href="index.html">I n i c i o</a>
+            </div>
+        </div>
 
-<section>
-
-<a href="mod3d.html">Modelado 3D</a>
-<a href="ilus.html">Ilustración</a>
-<a href="foto.html">Fotografía</a>
-
-</section>
-
-<nav>
-<a href="index.html">Inicio</a>
-</nav>
+        <div class="col-3">           
+        </div>
+        
+    </div>     
 
 </body>
 </html>

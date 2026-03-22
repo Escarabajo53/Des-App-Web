@@ -21,6 +21,9 @@
     h1, h2, h3, h4, h5, h6 {
         font-family: "Titulos", Arial, sans-serif;
     }
+    h2 {
+        font-size: 18px;
+    }
 
     .contenedor {
         display: grid;
@@ -46,7 +49,13 @@
     img {
         display: block;
         margin: auto;
+        margin-bottom: 30px;
     }
+
+    img:last-of-type {
+        margin-top: 50px;
+    }
+
     section {
         margin-top: 30px;
     }
@@ -54,11 +63,47 @@
         display: flex;
         gap: 20px;
     }
+
     .col-3 {
     padding: 25px; 
     }
+    
+    .col-2{
+        padding: 20px 20px;
+    }
+
     .columna {
         width: 50%;
+    }
+
+    h1, p {
+        margin-bottom: 50px;
+        display: block;
+    }
+
+    a, p {
+        margin-bottom: 30px;
+        display: block;
+    }
+
+    a {
+        font-size: 15px;
+        color: white;
+        background-color: #0D0D0D;
+        
+        padding: 12px 12px;
+        border-radius: 10px;
+
+        text-decoration: none;
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin: 6px 30px;
+
+        border: 2px solid #FF0020;
     }
     
     </style>
@@ -72,8 +117,11 @@
         <div class="col-2">
             <!-- Contenido columna 2 -->
              <main>
-                <img src="img/FotoJHD.jpg" width="200" alt="Foto Joshua">
-                <img src="img/TenguLogo.png" width="200" alt="Foto Logo">
+                <img src="img/FotoJHD2.png" width="75%">
+                <a href="contacto.html">C o n t a c t o</a><br>
+                <a href="portafolio.html">P o r t a f o l i o</a><br>
+                <a href="habilidades.html">H a b i l i d a d e s</a>
+                <img src="img/TenguLogo.png" width="45%">
              </main>
             
 
@@ -89,7 +137,7 @@
 
                 <section>
                     <div>
-                        <h2>Experiencia</h2>
+                        <h2>E x p e r i e n c i a</h2>
                         <p>VOLKSVAGEN<br>
                         Prácticas Profesionales (Septiembre 2022 – Marzo 2023)<br>
                         Brindé apoyo en la gestión del almacén de la agencia, participando
@@ -97,13 +145,13 @@
                     </div>
 
                     <div>
-                        <h2>Formacion</h2>
+                        <h2>F o r m a c i o n</h2>
                         <p>Universidad (2023 - Actualidad)</p>
                     </div>
                 </section>
 
                 <section>
-                    <h2>Herramientas</h2>
+                    <h2>H e r r a m i e n t a s</h2>
                     <p>Ibis Paint<br>Gimp<br>Photoshop</p>
                 </section>
             </main>
