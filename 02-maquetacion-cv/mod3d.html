@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Modelado 3D</title>
+    <link rel="icon" type="image/png" href="img/TenguLogo.png">
 
     <style>
     @font-face {
@@ -17,127 +18,101 @@
     body {
         font-family: "Texto", Arial, sans-serif;
         margin: 0; 
+        background: #0D0D0D;
     }
-    h1, h2, h3, h4, h5, h6 {
+
+    h1 {
         font-family: "Titulos", Arial, sans-serif;
-    }
-    h2 {
-        font-size: 18px;
+        font-size: 50px;
+        margin: 0;
+        color: white;
     }
 
     .contenedor {
         display: grid;
         grid-template-columns: 15% 70% 15%;
-        gap: 0;
         height: 100vh; 
     }
 
-    .col-1 { background: #1F222D; }
-    .col-2 { background: #0D0D0D; }
-    .col-3 { background: #1F222D; }
-
-    .col-1, .col-2, .col-3 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: white;
-    }
-
-    img {
-        display: block;
-        margin: auto;
-        margin-bottom: 10px;
-    }
-
-    img:last-of-type {
-        margin-top: 18px;
-    }
-
-    section {
-        margin-top: 30px;
-    }
-
-    .columnas {
-        display: flex;
-        gap: 20px;
-    }
-
-    .col-2 {
-    padding: 25px; 
-    }
+    .col-1, .col-3 { background: #1F222D; }
     
-    .col-2{
-        padding: 20px 20px;
+    .col-2 { 
+        background: #0D0D0D; 
+        padding: 40px;
+        overflow-y: auto;
     }
 
-    .columna {
-        width: 50%;
+    /* Cabecera */
+    .cabecera-seccion {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 50px;
+        position: relative;
     }
 
-    h1, p {
-        margin-bottom: 18px;
-        display: block;
-    }
-
-    a, p {
-        margin-bottom: 30px;
-        display: block;
-    }
-
-    a {
-        font-size: 18px;
-        color: white;
-        background-color: #0D0D0D;
-        
-        padding: 18px 18px;
-        border-radius: 10px;
-
-        text-decoration: none;
-        font-weight: bold;
-
+    .btn-volver {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #FF0020;
+        border-radius: 8px;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        margin: 6px 30px;
-
-        border: 2px solid #FF0020;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
     }
 
-    .menu {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+    .logo-esquina {
+        position: absolute;
+        right: 0;
+        width: 80px;
     }
 
-    .grupo-arriba {
-        display: flex;
-        gap: 15px;
+    /* Galería */
+    .grid-imagenes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
     }
 
+    .item {
+        background: #1F222D;
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #333;
+    }
+
+    .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
     </style>
 </head>
 
 <body>
-
     <div class="contenedor">
-        <div class="col-1">
-        </div>
+        <div class="col-1"></div>
 
         <div class="col-2">
-            <div class="menu">
-                <div class="grupo-arriba">
-                    <a href="portafolio.html"> < </a>
-                    <h1>PORTAFOLIO</h1>
-                </div>
+            <header class="cabecera-seccion">
+                <a href="portafolio.html" class="btn-volver">&lt;</a>
+                <h1>MODELADO 3D</h1>
+                <img src="img/TenguLogo.png" class="logo-esquina">
+            </header>
+
+            <div class="grid-imagenes">
+                <div class="item"><img src="img/mod3d/mod3d (1).png"></div>
+                <!-- Agrega más aquí abajo -->
+                <div class="item"><img src="img/mod3d/mod3d (2).png"></div>
             </div>
         </div>
 
-        <div class="col-3">           
-        </div>
-        
-    </div>     
-
+        <div class="col-3"></div>
+    </div>
 </body>
 </html>

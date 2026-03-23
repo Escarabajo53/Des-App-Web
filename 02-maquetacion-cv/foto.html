@@ -1,39 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Proyecto 2</title>
+    <meta charset="UTF-8">
+    <title>Fotograia</title>
+    <link rel="icon" type="image/png" href="img/TenguLogo.png">
+
+    <style>
+    @font-face {
+        font-family: "Texto"; 
+        src: url("fonts/komika_display/KMKDSP__.ttf") format("truetype");
+    }
+    @font-face {
+        font-family: "Titulos";
+        src: url("fonts/avengeance_mightiest_avenger/AVENGEANCE MIGHTIEST AVENGER.ttf") format("truetype");
+    }
+
+    body {
+        font-family: "Texto", Arial, sans-serif;
+        margin: 0; 
+        background: #0D0D0D;
+    }
+
+    h1 {
+        font-family: "Titulos", Arial, sans-serif;
+        font-size: 50px;
+        margin: 0;
+        color: white;
+    }
+
+    .contenedor {
+        display: grid;
+        grid-template-columns: 15% 70% 15%;
+        height: 100vh; 
+    }
+
+    .col-1, .col-3 { background: #1F222D; }
+    
+    .col-2 { 
+        background: #0D0D0D; 
+        padding: 40px;
+        overflow-y: auto;
+    }
+
+    /* Cabecera */
+    .cabecera-seccion {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 50px;
+        position: relative;
+    }
+
+    .btn-volver {
+        width: 50px;
+        height: 50px;
+        border: 2px solid #FF0020;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .logo-esquina {
+        position: absolute;
+        right: 0;
+        width: 80px;
+    }
+
+    /* Galería */
+    .grid-imagenes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .item {
+        background: #1F222D;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid #333;
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .grid-imagenes {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        align-items: start; /* Esto evita que los cuadros se estiren para igualarse */
+    }
+    </style>
 </head>
 
 <body>
+    <div class="contenedor">
+        <div class="col-1"></div>
 
-<header>
-<h1>Pagina 2</h1>
-</header>
+        <div class="col-2">
+            <header class="cabecera-seccion">
+                <a href="portafolio.html" class="btn-volver">&lt;</a>
+                <h1>FOTOGRAFIA</h1>
+                <img src="img/TenguLogo.png" class="logo-esquina">
+            </header>
 
-<main>
+            <div class="grid-imagenes">
+                <div class="item"><img src="img/foto/foto (1).jpg"></div>
+                <div class="item"><img src="img/foto/foto (2).jpg"></div>
+                <div class="item"><img src="img/foto/foto (3).jpg"></div>
+                <div class="item"><img src="img/foto/foto (9).jpg"></div>
+                <div class="item"><img src="img/foto/foto (10).jpg"></div>
+                <div class="item"><img src="img/foto/foto (8).jpeg"></div>
+                <div class="item"><img src="img/foto/foto (7).jpeg"></div>
+                <div class="item"><img src="img/foto/foto (6).jpg"></div>
+                <div class="item"><img src="img/foto/foto (5).jpg"></div>
+                <div class="item"><img src="img/foto/foto (8).jpg"></div>
+                <div class="item"><img src="img/foto/foto (17).jpg"></div>
+                <div class="item"><img src="img/foto/foto (14).jpg"></div>
+                <div class="item"><img src="img/foto/foto (10).jpeg"></div>
+                <div class="item"><img src="img/foto/foto (11).jpeg"></div>
+                <div class="item"><img src="img/foto/foto (9).jpeg"></div>
+                <div class="item"><img src="img/foto/foto (12).jpg"></div>
+                <div class="item"><img src="img/foto/foto (12).jpeg"></div>
+                <div class="item"><img src="img/foto/foto (13).jpeg"></div>
+                <div class="item"><img src="img/foto/foto (13).jpg"></div>
+                <div class="item"><img src="img/foto/foto (4).jpg"></div>
 
-<section>
-<h2>Modelado 3D</h2>
+            </div>
+        </div>
 
-<img src="img/img (2).jpeg" width="300">
-
-<p>
-Aquí describes el proyecto.  
-Por ejemplo: modelado realizado en Blender con iluminación y texturas.
-</p>
-
-</section>
-
-</main>
-
-<nav>
-<a href="index.html">⬅ Volver al CV</a>
-</nav>
-
-<footer>
-<p>Portafolio personal</p>
-</footer>
-
+        <div class="col-3"></div>
+    </div>
 </body>
 </html>
