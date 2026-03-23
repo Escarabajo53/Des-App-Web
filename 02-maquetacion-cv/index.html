@@ -14,7 +14,6 @@
         font-family: "Titulos";
         src: url("fonts/avengeance_mightiest_avenger/AVENGEANCE MIGHTIEST AVENGER.ttf") format("truetype");
     }
-
     body {
         font-family: "Texto", Arial, sans-serif;
         margin: 0; 
@@ -25,38 +24,30 @@
     h2 {
         font-size: 18px;
     }
-
     .contenedor {
         display: grid;
         grid-template-columns: 15% 20% 50% 15%;
         gap: 0;
         height: 100vh; 
     }
-
-    /* 5) colores de las columnas para verlas */
     .col-1 { background: #1F222D; }
     .col-2 { background: #0D0D0D; }
     .col-3 { background: #747474; }
     .col-4 { background: #1F222D; }
-
-    /* 6) centrar contenido de cada columna */
     .col-1, .col-2, .col-3, .col-4 {
         display: flex;
         justify-content: center;
         align-items: center;
         color: white;
     }
-
     img {
         display: block;
         margin: auto;
         margin-bottom: 30px;
     }
-
     img:last-of-type {
         margin-top: 50px;
     }
-
     section {
         margin-top: 30px;
     }
@@ -64,29 +55,23 @@
         display: flex;
         gap: 20px;
     }
-
     .col-3 {
     padding: 25px; 
     }
-    
     .col-2{
         padding: 20px 20px;
     }
-
     .columna {
         width: 50%;
     }
-
     h1, p{
         margin-bottom: 50px;
         display: block;
     }
-
     a, p {
         margin-bottom: 30px;
         display: block;
     }
-
     a {
         font-size: 15px;
         color: white;
@@ -106,17 +91,53 @@
 
         border: 2px solid #FF0020;
     }
-    
+    .contenedor {
+        display: grid;
+        grid-template-columns: 15% 20% 50% 15%;
+        height: 100vh;
+        position: relative; 
+    }
+    .franja-roja {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        height: 75px;
+        background-color: #FF0020;
+        z-index: 1;
+    }
+    .header-franja {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 100%;
+        padding-left: 35%;
+    }
+    .header-franja h1 {
+        margin: 0;
+        color: white;
+        font-size: 30px;          
+        padding-left: 5%;
+    }
+    .col-2 {
+        z-index: 2;
+    }
     </style>
 </head>
 
 <body>
 
     <div class="contenedor">
+
+        <div class="franja-roja">
+            <header class="header-franja">
+                <h1>Joshua Horta Diaz</h1>
+            </header>
+        </div>
+
         <div class="col-1">
         </div>
         <div class="col-2">
-            <!-- Contenido columna 2 -->
              <main>
                 <img src="img/FotoJHD2.png" width="75%">
                 <a href="contacto.html">C o n t a c t o</a><br>
