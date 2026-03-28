@@ -1,29 +1,176 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Portafolio</title>
+    <meta charset="UTF-8">
+    <title>Contacto</title>
+    <link rel="icon" type="image/png" href="img/TenguLogo.png">
+
+    <style>
+        @font-face { /* Cargar tipografía personalizada para texto */
+
+            font-family: "Texto"; 
+            src: url("fonts/komika_display/KMKDSP__.ttf") format("truetype");}
+        @font-face { /* Cargar tipografía para títulos */
+            font-family: "Titulos";
+            src: url("fonts/avengeance_mightiest_avenger/AVENGEANCE MIGHTIEST AVENGER.ttf") format("truetype");}
+
+        body { /* Estilos generales del body */
+            font-family: "Texto", Arial, sans-serif; /* fuente principal */
+            margin: 0; /* quita márgenes por defecto */
+        }
+        h1, h2, h3, h4, h5, h6 { /* Aplica la fuente de títulos a todos los encabezados */
+            font-family: "Titulos", Arial, sans-serif;
+        }
+        h2 { /* Tamaño específico para h2 */
+            font-size: 25;
+        }
+        .contenedor { /* Contenedor principal con GRID (divide la pantalla en columnas) */
+            display: grid;
+            grid-template-columns: 15% 20% 50% 15%; /* proporciones de columnas */
+            gap: 0; /* sin espacio entre columnas */
+            height: 100vh; /* altura total de la pantalla */
+        }
+        .col-1 { background: #1F222D; } /* Colores de cada columna */
+        .col-2 { background: #0D0D0D; }
+        .col-3 { background: #747474; }
+        .col-4 { background: #1F222D; }
+
+        .col-1, .col-2, .col-4 { /* Centrar contenido dentro de cada columna */
+            display: flex; /* activa flexbox */
+            justify-content: center; /* centra horizontal */
+            align-items: center; /* centra vertical */
+            color: white; /* texto blanco */
+        }
+        img { /* Imagen centrada */
+            display: block; /* elimina comportamiento inline */
+            margin: auto; /* centra */
+            margin-bottom: 30px; /* espacio abajo */
+        }
+        img:last-of-type { /* Solo la última imagen (logo) tiene espacio arriba */
+            margin-top: 50px;
+        }
+        section { /* Separación entre secciones */
+            margin-top: 30px;
+        }
+        .columnas { /* Sistema de columnas internas (flex) */
+            display: flex;
+            gap: 20px; /* espacio entre columnas */
+        }
+        .col-3 { /* Padding interno de la columna 3 (contenido principal) */
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 180px 25px 25px 25px;
+            color: white; /* texto blanco */
+        }
+        .col-2{ /* Padding de la columna 2 (menú lateral) */
+            padding: 20px 20px;
+        }
+        .columna { /* Cada columna interna ocupa la mitad */
+            width: 50%;
+        }
+        h1, p{ /* Espacio inferior para títulos y párrafos */
+            margin-bottom: 50px;
+            display: block;
+        }
+        a, p { /* Espacio entre enlaces y párrafos */
+            margin-bottom: 30px;
+            display: block;
+        }
+        a { /* Estilo de los botones (links <a>) */
+            font-size: 15px; /* tamaño de texto */
+            color: white; /* texto blanco */
+            background-color: #0D0D0D; /* fondo oscuro */
+            
+            padding: 12px 12px; /* espacio interno */
+            border-radius: 10px; /* bordes redondeados */
+
+            text-decoration: none; /* quita subrayado */
+            font-weight: bold;
+
+            display: flex; /* para centrar contenido */
+            justify-content: center; /* centra horizontal */
+            align-items: center; /* centra vertical */
+
+            margin: 6px 30px; /* espacio entre botones */
+
+            border: 2px solid #FF0020; /* borde rojo */
+        }
+        .contenedor { /* Contenedor con posición relativa (para elementos encima) */
+            display: grid;
+            grid-template-columns: 15% 20% 50% 15%;
+            height: 100vh;
+            position: relative; /* permite posicionar cosas encima */
+        }
+        .franja-roja { /* Franja roja decorativa */
+            position: absolute; /* se posiciona encima */
+            top: 50px; /* distancia desde arriba */
+            left: 0;
+            width: 100%; /* ocupa todo el ancho */
+            height: 75px;
+            background-color: #FF0020;
+            z-index: 1; /* capa baja */
+        }
+        .header-franja { /* Contenedor del header dentro de la franja */
+            display: flex;
+            justify-content: flex-start; /* alinea a la izquierda */
+            align-items: center; /* centra vertical */
+            height: 100%;
+            padding-left: 35%; /* empuja hacia la derecha */
+        }
+        .header-franja h1 { /* Estilo del nombre en la franja */
+            margin: 0;
+            color: white;
+            font-size: 30px;          
+            padding-left: 5%;
+        }
+        .col-2 { /* Hace que la columna 2 esté por encima de la franja */
+            z-index: 2;
+        }
+
+    </style>
+    
 </head>
 
 <body>
 
-<header>
-<h1>Portafolio</h1>
-</header>
+    <div class="contenedor">
 
-<img src="img/TenguLogo.png" width="300">
+        <div class="franja-roja">
+            <header class="header-franja">
+                <h1>Joshua Horta Diaz</h1>
+            </header>
+        </div>
 
-<section>
+        <div class="col-1">
+        </div>
+        <div class="col-2">
+             <main>
+                <img src="img/FotoJHD2.png" width="75%">
+                <a href="portafolio.html">P o r t a f o l i o</a><br>
+                <a href="habilidades.html">H a b i l i d a d e s</a>
+                <a href="index.html">I n i c i o</a><br>
+                <img src="img/TenguLogo.gif" width="45%">
+             </main>
+            
 
-<a href="mod3d.html">Modelado 3D</a>
-<a href="ilus.html">Ilustración</a>
-<a href="foto.html">Fotografía</a>
-
-</section>
-
-<nav>
-<a href="index.html">Inicio</a>
-</nav>
+        </div>
+        <div class="col-3">           
+            <main>
+                <section>
+                    <div>
+                        <h2>C o n t a c t o</h2>
+                        <p>WHATSAPP<br>
+                        - 938 177 1574</p>
+                        <p>CORREO<br>
+                        - joshuahd15@gmail.com</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <div class="col-4">
+        </div>
+    </div>    
 
 </body>
 </html>
