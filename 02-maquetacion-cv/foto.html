@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Fotograia</title>
+    <title>Fotografía</title>
     <link rel="icon" type="image/png" href="img/TenguLogo.png">
 
     <style>
@@ -31,18 +31,33 @@
     .contenedor {
         display: grid;
         grid-template-columns: 15% 70% 15%;
-        height: 100vh; 
+        min-height: 100vh;
     }
 
-    .col-1, .col-3 { background: #1F222D; }
-    
+    .col-1, .col-3 {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .video-fondo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: 0;
+    }
+
     .col-2 { 
         background: #0D0D0D; 
         padding: 40px;
-        overflow-y: auto;
+        min-height: 100vh;
     }
 
-    /* Cabecera */
     .cabecera-seccion {
         display: flex;
         align-items: center;
@@ -61,10 +76,19 @@
         align-items: center;
         color: white;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 22px;
         font-weight: bold;
+        background-color: transparent;
+        transition: all 0.4s ease;
     }
 
+    .btn-volver:hover {
+        transform: scale(1.15);
+        background-color: #FF0020;
+        color: white;
+        border-color: #FF0020;
+        box-shadow: 0 0 20px rgba(255, 0, 32, 0.6);
+    }
     .logo-esquina {
         position: absolute;
         right: 0;
@@ -79,10 +103,9 @@
     }
 
     .item {
-        background: #1F222D;
+        background: transparent;
         border-radius: 8px;
         overflow: hidden;
-        border: 1px solid #333;
     }
 
     .item img {
@@ -101,7 +124,11 @@
 
 <body>
     <div class="contenedor">
-        <div class="col-1"></div>
+        <div class="col-1">
+            <video autoplay muted loop class="video-fondo">
+                <source src="vid/G girando.mp4" type="video/mp4">
+            </video>
+        </div>
 
         <div class="col-2">
             <header class="cabecera-seccion">
@@ -135,7 +162,11 @@
             </div>
         </div>
 
-        <div class="col-3"></div>
+        <div class="col-3">
+            <video autoplay muted loop class="video-fondo">
+                <source src="vid/G girando.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
 </body>
 </html>

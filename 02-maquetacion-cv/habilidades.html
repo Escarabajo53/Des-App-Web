@@ -30,10 +30,43 @@
             gap: 0; /* sin espacio entre columnas */
             height: 100vh; /* altura total de la pantalla */
         }
-        .col-1 { background: #1F222D; } /* Colores de cada columna */
+        
+        .col-1 {
+        position: relative;
+        overflow: hidden;
+        }
+
+        .video-fondo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            z-index: 0;
+        }
         .col-2 { background: #0D0D0D; }
         .col-3 { background: #747474; }
-        .col-4 { background: #1F222D; }
+        .col-4 {
+        position: relative;
+        overflow: hidden;
+        }
+
+        .video-fondo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            z-index: 0;
+        }
 
         .col-1, .col-2, .col-4 { /* Centrar contenido dentro de cada columna */
             display: flex; /* activa flexbox */
@@ -143,6 +176,9 @@
         </div>
 
         <div class="col-1">
+            <video autoplay muted loop class="video-fondo">
+                <source src="vid/G girando.mp4" type="video/mp4">
+            </video>
         </div>
         <div class="col-2">
              <main>
@@ -166,12 +202,14 @@
                         a los demás; el manejo básico de Office se refiere al uso de programas como Word, Excel o 
                         PowerPoint para tareas sencillas; y el escaneo e impresiones abarca la digitalización de 
                         documentos y el uso correcto de impresoras para obtener copias físicas.</p>
-                        
                     </div>
                 </section>
             </main>
         </div>
         <div class="col-4">
+            <video autoplay muted loop class="video-fondo">
+                <source src="vid/G girando.mp4" type="video/mp4">
+            </video>
         </div>
     </div>    
 
